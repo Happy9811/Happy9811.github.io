@@ -1,0 +1,179 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+}
+.header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+.card {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    transition: all 400ms;
+}
+
+.card:hover{
+    scale: 1.03;
+}
+
+.card h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.stats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+}
+
+.stat{
+    height: fit-content;
+    grid-area: 1fr;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.statSpanCost{
+    color: red;
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.statSpan{
+    color: #0daf15;
+}
+
+.statFinal{
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.chart-container {
+    width: 100%;
+    height: 300px;
+}
+.footer {
+    margin-top: 20px;
+}
+
+.cardTitle{
+    font-size: 3rem;
+}
+
+.chart-container2{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media(max-width:400px) {
+    .container {
+        max-width: 400px;
+        margin: 20px auto;
+        padding: 20px;
+    }
+    .header {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+    }
+    .card {
+        display: flex;
+        height: fit-content;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        padding: 11px;
+        border-radius: 10px;
+        transition: all 400ms;
+        padding: 1.5%;
+    }
+    
+    .card:hover{
+        scale: 1.03;
+    }
+    
+    .card h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    
+    .stat{
+        width: fit-content;
+        height: fit-content;
+        grid-area: 1fr;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
+        font-size: 15px;
+        padding: 5px;
+    }
+    
+    .statSpanCost{
+        color: red;
+        font-weight: 900;
+        font-size: 27px;
+    }
+    
+    .statSpan{
+        color: #0b9412;
+    }
+    
+    .chart-container {
+        width: 100%;
+        height: fit-content;
+    }
+    .footer {
+        margin-top: 20px;
+    }
+    
+    .cardTitle{
+        font-size: 3rem;
+    }
+
+    #finalCard{
+        font-size: 1.8rem;
+    }
+    
+    .chart-container2{
+        width: 100%;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #visitorsChart{
+        height: 250px;
+    }
+
+}
