@@ -13,6 +13,7 @@ $(document).ready(() => {
             free_data.push(json.usersLast30Days);
             free_data.push(json.usersLast6Months);
             free_data.push(json.usersLast1Year);
+            free_data.push(json.totalUsers);
         }
         console.log("Free Users ==>", free_data)
         showChart('Free Users');
