@@ -109,6 +109,7 @@ body {
         height: fit-content;
         justify-content: center;
         align-items: center;
+        flex-flow: column;
         background-color: rgb(255, 255, 255);
         padding: 11px;
         border-radius: 10px;
@@ -174,6 +175,10 @@ body {
 
     #visitorsChart{
         height: 250px;
+    }
+
+    .statFinal{
+        font-size: 23px;
     }
 
 }
