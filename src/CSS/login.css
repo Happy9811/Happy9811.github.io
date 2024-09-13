@@ -1,0 +1,31 @@
+body {
+    background-color: black; /* Set the background color based on the second image */
+    color: white; /* Set default text color */
+}
+
+.custom-button {
+    background-color: #FF4500; /* Use orange color for sign-in button */
+}
+
+.google-button {
+    background-color: #4285F4; /* Google button blue */
+}
+
+.google-button:hover {
+    background-color: #3367D6; /* Darker blue on hover */
+}
+
+.custom-button{
+    background-color: #d82d82;
+    transition: all 400ms;
+}
+
+.custom-button:hover {
+    background-color: #ec4899; /* Slightly lighter orange for hover */
+}
+
+@media(max-width:400px){
+    #motherBox{
+        width: 90%;
+    }
+}

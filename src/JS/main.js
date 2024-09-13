@@ -16,14 +16,14 @@ $(document).ready(() => {
     }
     
     if(localStorage.getItem('visitor_data') && localStorage.getItem('visitor_total')) {
-        var data = localStorage.getItem('visitor_data');
-        var total = localStorage.getItem('visitor_total');
+        let data = localStorage.getItem('visitor_data');
+        let total = localStorage.getItem('visitor_total');
 
         data = data.split(",");
 
-        var ctx = document.getElementById('visitorsChart').getContext('2d');
+        let ctx = document.getElementById('visitorsChart').getContext('2d');
         //Chart with user infomation
-        var visitorsChart = new Chart(ctx, {
+        let visitorsChart = new Chart(ctx, {
             type: 'line',
             
             //Information inside the chart:
@@ -122,8 +122,8 @@ $(document).ready(() => {
     
 
     $.get('https://chat.nofiltergpt.com/back/number3.php?api_key=8e34b3c9d5a6f7e8c1b2a3d4e5f6a7b8', {}, (json) => {
-        var data = [];
-        var total = 0;
+        let data = [];
+        let total = 0;
         if(json && json.visitorsToday != undefined || json.visitorsToday != null ) {
             data.push(json.visitorsToday);
             data.push(json.visitorsLast7Days);
@@ -140,10 +140,10 @@ $(document).ready(() => {
         localStorage.setItem('visitor_total', total);
 
         //Canva element
-        var ctx = document.getElementById('visitorsChart').getContext('2d');
+        let ctx = document.getElementById('visitorsChart').getContext('2d');
 
         //Chart with user infomation
-        var visitorsChart = new Chart(ctx, {
+        let visitorsChart = new Chart(ctx, {
             type: 'line',
             
             //Information inside the chart:
@@ -198,7 +198,7 @@ $(document).ready(() => {
     })
 })
 
-var showChart = (params) => {
+let showChart = (params) => {
     if(params && state.indexOf(params) == -1) {
         state.push(params);
     } 
@@ -208,10 +208,10 @@ var showChart = (params) => {
     }
 
     // Chart.js code for Paid Users Stacked Bar and Line Chart
-    var ctxStacked = document.getElementById('paidUsersStackedChart').getContext('2d');
+    let ctxStacked = document.getElementById('paidUsersStackedChart').getContext('2d');
     console.log(ctxStacked);
-    
-    var paidUsersStackedChart = new Chart(ctxStacked, {
+
+    let paidUsersStackedChart = new Chart(ctxStacked, {
         type: 'bar',
         data: {
             labels: ['Today', 'Last 7 Days', 'Last 30 Days', 'Last 6 Months', 'Last 1 Year', 'Total Users'],
@@ -250,7 +250,6 @@ var showChart = (params) => {
         }
     });
 }
-
 
 
 
