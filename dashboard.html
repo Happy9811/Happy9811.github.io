@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>User Dashboard</title>
+
+        <!-- Chart JS -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <!-- Font of app -->
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+        <!-- main js file<span class = "statSpan"> </span> -->
+        <script defer src="src/JS/main.js"></script>
+        
+        <!-- Main styles -->
+        <link rel="stylesheet" href="src/CSS/main.css">
+        
+
+        <link rel="stylesheet" href="src/tailwind/output.css">
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dashboard</title>
+
+    </head>
+<body class = "bg-black">
+
+<div class="container">
+    <div class="header text-[3rem] text-[#ff185d]">User Dashboard</div>
+
+    <div class="card footer">
+        <h2 class = "text-center w-[100%] h-fit">Free & Paid Users</h2>
+        <div class="chart-container flex justify-center items-center">
+            <canvas id="paidUsersStackedChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Total Messages & Costs -->
+    <div class="grid footer">
+        <!-- Visitors Chart -->
+        <div class="card">
+            <h2 class = "text-center w-[100%] h-fit">Visitors</h2>
+            <div class="chart-container flex justify-center items-center">
+                <canvas id="visitorsChart"></canvas>
+            </div>
+        </div>
+        <div class="card">
+            <h2 id = "finalCard" class = "text-center w-[100%] h-fit">Total Messages & Costs</h2>
+            <div class="text-[14px] mt-[5%] flex flex-col items-center justify-center">
+                <p class = "statFinal">Total Messages: <span class = "statSpan" id="totalmsg"> 0</span> </p>
+                <p class = "statFinal">Average Inputs Per User: <span class = "statSpan" id="averageinput"> 0</span> </p>
+                <p class = "statFinal">Unique Users that Chatted: <span class = "statSpan" id="uniqueusers"> 0</span> </p>
+                <p class = "statFinal">Monthly Costs: <span class = "statSpanCost" id="monthlycosts"> $0</span> </p>
+            </div>
+        </div>
+    </div>
+    
+</div>
+</body>
+</html>

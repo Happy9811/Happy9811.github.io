@@ -1,69 +1,76 @@
-
 <!DOCTYPE html>
-
 <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="src/CSS/login.css">
 
-    <head>
+<body class="flex items-center justify-center h-screen">
 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>User Dashboard</title>
-
-        <!-- Chart JS -->
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-        <!-- Font of app -->
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-
-
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-
-        <!-- main js file<span class = "statSpan"> </span> -->
-        <script defer src="src/JS/main.js"></script>
-        
-        <!-- Main styles -->
-        <link rel="stylesheet" href="src/CSS/main.css">
-        
-
-        <link rel="stylesheet" href="src/tailwind/output.css">
-        
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dashboard</title>
-
-    </head>
-<body class = "bg-black">
-
-<div class="container">
-    <div class="header text-[3rem] text-[#ff185d]">User Dashboard</div>
-
-    <div class="card footer">
-        <h2 class = "text-center w-[100%] h-fit">Free & Paid Users</h2>
-        <div class="chart-container flex justify-center items-center">
-            <canvas id="paidUsersStackedChart"></canvas>
-        </div>
+    <div id = "motherBox" class="w-full max-w-md bg-white rounded-lg shadow-lg p-8 duration-[400ms] hover:scale-[1.02]" style="background-color: #ffffff;">
+    <div class="flex justify-center mb-6">
+        <img src="assets/images/logo.svg" alt="App Logo" class="w-16 h-16"> <!-- Example logo -->
     </div>
 
-    <!-- Total Messages & Costs -->
-    <div class="grid footer">
-        <!-- Visitors Chart -->
-        <div class="card">
-            <h2 class = "text-center w-[100%] h-fit">Visitors</h2>
-            <div class="chart-container flex justify-center items-center">
-                <canvas id="visitorsChart"></canvas>
-            </div>
+    <h2 class="text-3xl font-semibold text-center text-pink-500 mb-6">Sign In</h2> <!-- Pink based on 2nd image -->
+
+    <form action="#">
+        <div class="mb-4">
+            <label for="email" class="block text-gray-800 text-sm mb-2 font-bold">Email or Username</label>
+            <input type="text" id="email" class="w-full px-4 py-2 bg-gray-800 text-white border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-pink-500" placeholder="Enter your email or username">
         </div>
-        <div class="card">
-            <h2 id = "finalCard" class = "text-center w-[100%] h-fit">Total Messages & Costs</h2>
-            <div class="text-[14px] mt-[5%] flex flex-col items-center justify-center">
-                <p class = "statFinal">Total Messages: <span class = "statSpan" id="totalmsg"> 0</span> </p>
-                <p class = "statFinal">Average Inputs Per User: <span class = "statSpan" id="averageinput"> 0</span> </p>
-                <p class = "statFinal">Unique Users that Chatted: <span class = "statSpan" id="uniqueusers"> 0</span> </p>
-                <p class = "statFinal">Monthly Costs: <span class = "statSpanCost" id="monthlycosts"> $0</span> </p>
-            </div>
+
+        <div class="mb-4">
+            <label for="password" class="block text-gray-800 text-sm mb-2 font-bold">Password</label>
+            <input type="password" id="password" class="w-full px-4 py-2 bg-gray-800 text-white border border-gray-600 rounded focus:outline-none focus:ring-2 focus:ring-pink-500" placeholder="Enter your password">
         </div>
+
+        <div class="flex justify-between items-center mb-4">
+            <label class="flex items-center">
+            <input type="checkbox" class="text-pink-500 mr-2 focus:ring-0" checked>
+            <span class="text-sm text-gray-700 font-bold">Stay signed in for 30 days</span>
+        </label>
+        <a href="#" class="text-sm text-pink-500 hover:underline font-bold">Forgot Password?</a>
+        </div>
+
+        <button type="" id="sign" class="w-full py-2 text-white custom-button rounded-md mb-4">Sign In</button>
+
+    </form>
+
+    <div class="mt-4 text-center">
+        <a href="#" class="text-sm text-pink-500 hover:underline font-bold">Create Account instead?</a>
     </div>
-    
-</div>
+
+        <div class="mt-6 text-center text-gray-700">
+        <a href="#" class="text-xs hover:underline font-bold">Terms of use</a> | 
+        <a href="#" class="text-xs hover:underline font-bold">Privacy Policy</a>
+    </div>
+    </div>
 </body>
+
+<script>
+    $(document).ready(function() {
+        $('#sign').click(()=> {
+            if($('#email').val() == "") {
+                alert("Please enter your email");
+                return;
+            }
+
+            if($('#password').val() == "") {
+                alert("Please enter your password");
+                return;
+            }
+
+            if($('#password').val() != "grantisfat") {
+                alert("Wrong password");
+                return;
+            }
+
+            document.location.href = "dashboard.html";
+        })
+    })
+</script>
 </html>
