@@ -111,6 +111,7 @@ body {
         align-items: center;
         flex-flow: column;
         background-color: rgb(255, 255, 255);
+        box-shadow: 2px 2px 5px #ff245e45;
         padding: 11px;
         border-radius: 10px;
         transition: all 400ms;
