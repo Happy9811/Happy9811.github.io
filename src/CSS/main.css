@@ -10,7 +10,7 @@ body {
     padding: 20px;
 }
 .header {
-    font-size: 24px;
+    /* font-size: 24px; */
     font-weight: bold;
     margin-bottom: 20px;
 }
@@ -32,7 +32,7 @@ body {
 }
 
 .card h2 {
-    font-size: 2rem;
+    /* font-size: 2rem; */
     font-weight: bold;
     margin-bottom: 5px;
 }
@@ -51,13 +51,13 @@ body {
     align-items: center;
     justify-content: center;
     font-weight: 700;
-    font-size: 15px;
+    /* font-size: 15px; */
 }
 
 .statSpanCost{
     color: red;
     font-weight: 900;
-    font-size: 30px;
+    /* font-size: 30px; */
 }
 
 .statSpan{
@@ -66,7 +66,7 @@ body {
 
 .statFinal{
     font-weight: 700;
-    font-size: 28px;
+    /* font-size: 28px; */
 }
 
 .chart-container {
@@ -78,7 +78,7 @@ body {
 }
 
 .cardTitle{
-    font-size: 3rem;
+    /* font-size: 3rem; */
 }
 
 .chart-container2{
@@ -96,7 +96,7 @@ body {
         padding: 20px;
     }
     .header {
-        font-size: 24px;
+        /* font-size: 24px; */
         font-weight: bold;
         margin-bottom: 20px;
     }
@@ -124,7 +124,7 @@ body {
     }
     
     .card h2 {
-        font-size: 2rem;
+        /* font-size: 2rem; */
         font-weight: bold;
         margin-bottom: 10px;
     }
@@ -137,14 +137,14 @@ body {
         align-items: center;
         justify-content: center;
         font-weight: 700;
-        font-size: 15px;
+        /* font-size: 15px; */
         padding: 5px;
     }
     
     .statSpanCost{
         color: red;
         font-weight: 900;
-        font-size: 27px;
+        /* font-size: 27px; */
     }
     
     .statSpan{
@@ -160,11 +160,11 @@ body {
     }
     
     .cardTitle{
-        font-size: 3rem;
+        /* font-size: 3rem; */
     }
 
     #finalCard{
-        font-size: 1.8rem;
+        /* font-size: 1.8rem; */
     }
     
     .chart-container2{
@@ -180,7 +180,7 @@ body {
     }
 
     .statFinal{
-        font-size: 22px;
+        /* font-size: 22px; */
     }
 
 }

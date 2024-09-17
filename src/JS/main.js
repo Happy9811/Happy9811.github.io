@@ -83,7 +83,7 @@ $(document).ready(() => {
 
     if(localStorage.getItem('monthly_costs')) {
         let data = localStorage.getItem('monthly_costs');
-        $('#monthlycosts').html(data);
+        $('#monthlycosts').html('$' + data);
     }
 
 
